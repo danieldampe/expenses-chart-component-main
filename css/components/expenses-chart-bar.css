@@ -1,0 +1,38 @@
+/*  
+// *** *** *** Expenses Chart Bar *** *** ***
+*/
+.expenses-chart-bar { 
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    width: calc(100% / 7); 
+}
+
+.expenses-chart-bar__num {
+    padding: 0.3rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: var(--color-very-pale-orange);
+    background-color: var(--color-dark-brown);
+    opacity: 0; 
+}
+
+.expenses-chart-bar__bar { 
+    width: 70%;
+    border-radius: 5px;
+    background-color: var(--color-soft-red); 
+    cursor: pointer;
+}
+
+.expenses-chart-bar__bar.is-active { background-color: var(--color-cyan); }
+
+.expenses-chart-bar__bar:hover +
+.expenses-chart-bar__num {
+    opacity: 1;
+}
+
+.expenses-chart-bar__day {
+    font-size: 0.7rem;
+    color: var(--color-medium-brown);
+}

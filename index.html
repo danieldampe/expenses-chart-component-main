@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components/expenses-chart.css">
+    <link rel="stylesheet" href="./css/components/expenses-chart-bar.css">
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <div id="root">
+        <main id="main" class="main"></main>
+        <footer class="footer attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/danieldampe" target="_blank">danieldampe</a>.
+        </footer>
+    </div>
+    <!-- Components -->
+    <template id="expenses-chart">
+        <div class="expenses-chart">
+            <div class="expenses-chart-header">
+                <div class="expenses-chart-header__div1">
+                    <h1 class="expenses-chart-header-div1__title">My balance</h1>
+                    <div class="expenses-chart-header-div1__num">$921.48</div>
+                </div>
+                <div class="expenses-chart-header__div2">
+                    <img src="./images/logo.svg" alt="Logo" class="expenses-chart-header-div2__img">
+                </div>
+            </div>
+            <div class="expenses-chart-main">
+                <div class="expenses-chart-body">
+                    <h2 class="expenses-chart-body__title">Spending - Last 7 days</h2>
+                    <div class="expenses-chart-body__chart" data-chart></div>
+                </div>
+                <div class="expenses-chart-main__line"></div>
+                <div class="expenses-chart-footer">
+                    <div class="expenses-chart-footer__div1">
+                        <h3 class="expenses-chart-footer-div1__title">Total this month</h3>
+                        <div class="expenses-chart-footer-div1__num">$478.33</div>
+                    </div>
+                    <div class="expenses-chart-footer__div2">
+                        <div class="expenses-chart-footer-div2__num">+2.4%</div>
+                        <div class="expenses-chart-footer-div2__txt">from last month</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="expenses-chart-bar">
+        <div class="expenses-chart-bar">
+            <div class="expenses-chart-bar__day" data-day></div>
+            <div class="expenses-chart-bar__bar" data-bar></div>
+            <div class="expenses-chart-bar__num" data-num></div>
+        </div>
+    </template>
+    <!-- JS -->
+    <script type="module" src="./js/index.js"></script>
+    <!-- 
+        My balance
+        $921.48
+      
+        Spending - Last 7 days
+      
+        mon
+        tue
+        wed
+        thu
+        fri
+        sat
+        sun
+      
+        Total this month
+        $478.33
+      
+        +2.4%
+        from last month
+    -->
+</body>
+</html>
